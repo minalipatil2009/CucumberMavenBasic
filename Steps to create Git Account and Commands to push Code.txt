@@ -1,0 +1,41 @@
+1. How to Create git account?
+	a. Go To https://github.com/
+	b. Click SignUp
+	c. Enter user name , email, and password =>submit
+
+2. How to Create repository?
+	a. Click on Plus icon near Your profile icon
+	b. Click on New Repository
+	c. Enter name of the repository and select public type
+	d. Click Create Repository button(Do not select any options)
+	e. Repository will get created
+	f. Click on code tab to get the commands to link it to your local repository.
+
+3. How to create SSH key for windows?
+	a. From Git Bash => ssh-keygen -t rsa
+	b. Key will get generated at home directory like below:
+		$ ssh-keygen -t rsa
+		Generating public/private rsa key pair.
+		Enter file in which to save the key (/c/Users/<username>/.ssh/id_rsa): /c/Users/<username>/.ssh/id_rsa
+		Enter passphrase (empty for no passphrase):
+		Enter same passphrase again:
+		Your identification has been saved in /c/Users/<username>/.ssh/id_rsa
+		Your public key has been saved in /c/Users/<username>/.ssh/id_rsa.pub
+		The key fingerprint is:
+		
+	c. Three files will get created at c/Users/<username>/.ssh folder. Copy the content of .pub file (id_rsa.pub)
+
+4. Now add this key to your Git account
+	Settings-> SSH and GPG keys-> New SSH key->Enter a title in the field->Paste your public key into the Key field0-> Add SSH Key
+
+5. HoW to push Local code to Git Repository?
+	a. git status 
+	b. git init
+	c. git add .
+	d. git status
+	e. git commit -m "CucumberMavenBasic"
+	f. git status
+	g. Connect local Repository to Remote repository
+		git remote add origin "ssh link"
+		git branch -M master
+	h. git push -u origin master
